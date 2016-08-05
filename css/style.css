@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  background-image: url("http://res.cloudinary.com/dyqqt0ksz/image/upload/v1469672401/alpedhuez-remastered_rm8x2n.jpg");
+  color: #FAFAFA;
+}
+
+#title {
+  color: #FAFAFA;
+  margin: 30px auto;
+  text-align: center;
+  text-shadow: 2px 2px 2px #263238;
+}
+
+#plot {
+  margin: 20px auto;
+  text-align: center;
+}
+
+svg {
+  background: #263238;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #FAFAFA;
+  shape-rendering: crispEdges;
+}
+
+text {
+  fill: #FAFAFA;
+  stroke: #FAFAFA;
+  shape-rendering: crispEdges;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+circle {
+  transition: r 0.3s ease-out;
+}
+circle:hover {
+  r: 6;
+  stroke: #FAFAFA;
+  stroke-width: 1px;
+}
+
+div.tooltip {
+  position: absolute;
+  max-width: 200px;
+  height: auto;
+  padding: 5px;
+  pointer-events: none;
+  font-size: 12px;
+  text-align: center;
+  color: #263238;
+  background: #FAFAFA;
+  border-radius: 5px;
+}

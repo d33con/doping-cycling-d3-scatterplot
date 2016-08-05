@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300)
+$background: #263238
+$text: #FAFAFA
+
+body
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+  background-image: url("http://res.cloudinary.com/dyqqt0ksz/image/upload/v1469672401/alpedhuez-remastered_rm8x2n.jpg")
+  color: $text
+  
+#title
+  color: $text
+  margin: 30px auto
+  text-align: center
+  text-shadow: 2px 2px 2px $background
+  
+#plot
+  margin: 20px auto
+  text-align: center
+  
+svg 
+  background: $background
+  border-radius: 10px
+  opacity: 0.9
+
+.axis path,
+.axis line
+  fill: none
+  stroke: $text
+  shape-rendering: crispEdges
+  
+text
+  fill: $text
+  stroke: $text
+  shape-rendering: crispEdges
+  font-size: 12px
+  font-weight: 300
+
+circle
+  transition: r 0.3s ease-out
+  &:hover
+    r: 6
+    stroke: $text
+    stroke-width: 1px
+  
+div.tooltip   
+  position: absolute
+  max-width: 200px
+  height: auto
+  padding: 5px
+  pointer-events: none
+  font-size: 12px
+  text-align: center
+  color: $background
+  background: $text
+  border-radius: 5px
