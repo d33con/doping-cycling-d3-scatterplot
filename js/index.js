@@ -5,8 +5,10 @@ var margin = {
   left: 30
 };
 
-var width = 800 - margin.left - margin.right;
-var height = 650 - margin.top - margin.bottom;
+var width = parseInt(d3.select('#plot').style('width')),
+    width = width - margin.left - margin.right,
+    mapRatio = .6,
+    height = width * mapRatio;
 
 d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json", function(error, data) {
 
@@ -20,7 +22,7 @@ d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
   var svg = d3.select("#plot").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .append("g")
+  .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   // get the fastest and slowest times for the scales
@@ -141,7 +143,7 @@ d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
 
   // key
   var legend = svg.append("g");
-  
+
     legend.append("circle")
       .attr({
         cx: width - margin.left - margin.right - 100,
@@ -149,7 +151,7 @@ d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
         r: 5,
         fill: "#26A69A"
       });
-  
+
     legend.append("text")
     .attr({
       x: width - margin.left - margin.right - 90,

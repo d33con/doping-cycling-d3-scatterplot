@@ -3,6 +3,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   background-image: url("http://res.cloudinary.com/dyqqt0ksz/image/upload/v1469672401/alpedhuez-remastered_rm8x2n.jpg");
+  background-size: cover;
   color: #FAFAFA;
 }
 
@@ -14,7 +15,8 @@ body {
 }
 
 #plot {
-  margin: 20px auto;
+  margin: 10px auto;
+  width: 60%;
   text-align: center;
 }
 
