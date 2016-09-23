@@ -7,7 +7,7 @@ var margin = {
 
 var width = parseInt(d3.select('#plot').style('width')),
     width = width - margin.left - margin.right,
-    mapRatio = .6,
+    mapRatio = .65,
     height = width * mapRatio;
 
 d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json", function(error, data) {
@@ -175,3 +175,9 @@ d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
       .text("Riders with doping allegations");
 
 });
+
+// background image sizing javascript
+var windowHeight = self.innerHeight;
+document.getElementById('page-wrapper').style.height = windowHeight + "px";
+//target.style.height = window.innerHeight + 'px';
+console.log(windowHeight);
